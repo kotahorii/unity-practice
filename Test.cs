@@ -10,13 +10,15 @@ public class Test : MonoBehaviour
   {
     int[] values = new int[] { 1, 2, 3 };
 
-    UnityEngine.Debug.Log(values.Length);
-
-    UnityEngine.Debug.Log(values[0]);
-
     values[0] = 100;
 
-    UnityEngine.Debug.Log(values[0]);
+    List<int> lists = new List<int> { 1, 2, 3 };
+
+    UnityEngine.Debug.Log(lists.Count);
+
+    lists.Add(999);
+
+    UnityEngine.Debug.Log(lists[lists.Count - 1]);
 
   }
 
