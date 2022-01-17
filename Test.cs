@@ -29,6 +29,15 @@ public class Test : MonoBehaviour
     UnityEngine.Debug.Log(dic.Count);
   }
 
+  enum GameMode
+  {
+    Easy,
+    Normal,
+    Difficult
+  }
+
+  GameMode gameMode = GameMode.Easy;
+
   // Update is called once per frame
   void Update()
   {
