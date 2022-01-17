@@ -12,6 +12,8 @@ public class Test : MonoBehaviour
   {
     var result = GenerateTestMessage(1, 2);
     UnityEngine.Debug.Log(result);
+
+    var car = new Car();
   }
 
   // Update is called once per frame
@@ -37,4 +39,44 @@ public class Test : MonoBehaviour
   {
     return String.Format("{0}と{1}が渡されたよ！", value1, value2);
   }
+
+  public class Character
+  {
+    private int _characterLevel;
+    public int CharacterLevel
+    {
+      get
+      {
+        return _characterLevel;
+      }
+
+      set
+      {
+        _characterLevel = Mathf.Clamp(value, 1, 99);
+      }
+    }
+  }
+
+  public class Car
+  {
+    private Engine _engine;
+
+    private class Engine
+    {
+      public Engine()
+      {
+        UnityEngine.Debug.Log("エンジンを作ったよ！");
+      }
+    }
+
+    public Car()
+    {
+      _engine = new Engine();
+    }
+  }
 }
+
+
+
+
+
