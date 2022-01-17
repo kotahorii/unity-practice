@@ -22,8 +22,11 @@ public class Test : MonoBehaviour
     var position = new UnityEngine.Vector3(0, 1, 2);
     transform.position = position;
 
-    UnityEngine.Debug.Log(position.normalized);
-    UnityEngine.Debug.Log(position.magnitude);
+    // UnityEngine.Debug.Log(position.normalized);
+    // UnityEngine.Debug.Log(position.magnitude);
+
+    UnityEngine.Debug.Log(UnityEngine.Vector3.zero);
+    UnityEngine.Debug.Log(UnityEngine.Vector3.up);
   }
 
   enum GameMode
