@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,15 +8,16 @@ public class Test : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
-    var test = "TEST!!";
+    int[] values = new int[] { 1, 2, 3 };
 
-    Debug.Log(test);
+    UnityEngine.Debug.Log(values.Length);
 
-    Debug.Log(test.Length);
+    UnityEngine.Debug.Log(values[0]);
 
-    test = null;
+    values[0] = 100;
 
-    Debug.Log(test.Length);
+    UnityEngine.Debug.Log(values[0]);
+
   }
 
   // Update is called once per frame
