@@ -14,12 +14,19 @@ public class Test : MonoBehaviour
 
     List<int> lists = new List<int> { 1, 2, 3 };
 
-    UnityEngine.Debug.Log(lists.Count);
-
     lists.Add(999);
 
-    UnityEngine.Debug.Log(lists[lists.Count - 1]);
+    var dic = new Dictionary<string, int> { { "1", 1 }, { "2", 2 }, { "3", 3 } };
 
+    UnityEngine.Debug.Log(dic.Count);
+
+    dic["1"] = 100;
+
+    UnityEngine.Debug.Log(dic["1"]);
+
+    dic.Add("four", 4);
+
+    UnityEngine.Debug.Log(dic.Count);
   }
 
   // Update is called once per frame
