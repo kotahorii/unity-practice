@@ -10,6 +10,12 @@ public class Test : MonoBehaviour
     var test = "TEST!!";
 
     Debug.Log(test);
+
+    Debug.Log(test.Length);
+
+    test = null;
+
+    Debug.Log(test.Length);
   }
 
   // Update is called once per frame
