@@ -1,3 +1,4 @@
+using System.Numerics;
 using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
@@ -9,24 +10,20 @@ public class Test : MonoBehaviour
   void Start()
   {
     int[] values = new int[] { 1, 2, 3 };
-
     values[0] = 100;
-
     List<int> lists = new List<int> { 1, 2, 3 };
-
     lists.Add(999);
-
     var dic = new Dictionary<string, int> { { "1", 1 }, { "2", 2 }, { "3", 3 } };
-
-    UnityEngine.Debug.Log(dic.Count);
-
     dic["1"] = 100;
-
-    UnityEngine.Debug.Log(dic["1"]);
-
     dic.Add("four", 4);
+    const int c = 10;
+    UnityEngine.Debug.Log(c);
 
-    UnityEngine.Debug.Log(dic.Count);
+    var position = new UnityEngine.Vector3(0, 1, 2);
+    transform.position = position;
+
+    UnityEngine.Debug.Log(position.normalized);
+    UnityEngine.Debug.Log(position.magnitude);
   }
 
   enum GameMode
