@@ -5,6 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerController : MonoBehaviour
 {
+  [SerializeField] private Animator animator;
   [SerializeField] private float moveSpeed = 3;
   [SerializeField] private float jumpPower = 3;
   private CharacterController _characterController;
@@ -38,7 +39,7 @@ public class PlayerController : MonoBehaviour
     {
       _moveVelocity.y += Physics.gravity.y * Time.deltaTime;
     }
-
+    animator.SetFloat("MoveSpeed", new UnityEngine.Vector3(_moveVelocity.x, 0, _moveVelocity.z).magnitude);
     _characterController.Move(_moveVelocity * Time.deltaTime);
   }
 }
