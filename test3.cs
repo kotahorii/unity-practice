@@ -10,21 +10,52 @@ public class Test : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
-    var test = 1;
-    var value = test == 1 ? "test is 1" : "test is not 1";
+    // var test = 1;
+    // var value = test == 1 ? "test is 1" : "test is not 1";
 
-    var hp = 10;
-    if (hp < 10)
+    // var hp = 10;
+    // if (hp < 10)
+    // {
+    //   UnityEngine.Debug.Log("danger");
+    // }
+    // else if (hp < 30)
+    // {
+    //   UnityEngine.Debug.Log("warning");
+    // }
+    // else
+    // {
+    //   UnityEngine.Debug.Log("safe");
+    // }
+
+    // for (int i = 0; i < 10; i++)
+    // {
+    //   if (i == 5) break;
+    //   UnityEngine.Debug.Log(i);
+    // }
+
+    // var values = new int[] { 1, 10, 100, 1000 };
+    // foreach (var item in values)
+    // {
+    //   UnityEngine.Debug.Log(item);
+    // }
+
+    // var num = 0;
+    // while (num < 90)
+    // {
+    //   num = UnityEngine.Random.Range(0, 100);
+    // }
+    // UnityEngine.Debug.Log(num);
+
+    var val = 1;
+
+    switch (val)
     {
-      UnityEngine.Debug.Log("danger");
-    }
-    else if (hp < 30)
-    {
-      UnityEngine.Debug.Log("warning");
-    }
-    else
-    {
-      UnityEngine.Debug.Log("safe");
+      case 1:
+        UnityEngine.Debug.Log("Good morning");
+        break;
+      default:
+        UnityEngine.Debug.Log("good evening");
+        break;
     }
   }
 
