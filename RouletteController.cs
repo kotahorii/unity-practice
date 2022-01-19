@@ -19,5 +19,7 @@ public class RouletteController : MonoBehaviour
       this.rotSpeed = 10;
     }
     transform.Rotate(0, 0, this.rotSpeed);
+
+    this.rotSpeed *= 0.96f;
   }
 }
